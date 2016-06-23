@@ -1,4 +1,15 @@
-//remember keystrokes(numbers/operations)
-//operation buttons must operate accordingly
-//show answer in output
-//need 16 boxes, 10 for 0-9, 4 for operations, 1 for equals, and 1 for output
+var zero = document.querySelector('#zero');
+var one = document.querySelector('#one');
+var two = document.querySelector('#two');
+var three = document.querySelector('#three');
+var four = document.querySelector('#four');
+var five = document.querySelector('#five');
+var six = document.querySelector('#six');
+var seven = document.querySelector('#seven');
+var eight = document.querySelector('#eight');
+var nine = document.querySelector('#nine');
+var divide = document.querySelector('#divide');
+var multiply = document.querySelector('#multiply');
+var subtract = document.querySelector('#sutract');
+var divide = document.querySelector('#divide');
+var equals = document.querySelector('#equals');
