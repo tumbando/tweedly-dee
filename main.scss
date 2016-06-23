@@ -5,7 +5,7 @@
 // section {
 //   margin: 1rem;
 // }
-div {
+button {
   @include outer-container;
   @include span-columns(3);
   @include omega(4n);
@@ -15,6 +15,11 @@ div {
   margin: 5px;
 }
 
+.result {
+  height: 2rem;
+  width: 7rem;
+  background-color: aquamarine;
+}
 // .bottomRow {
 //   @include outer-container;
 //   @include span-columns(8);

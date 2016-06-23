@@ -4,7 +4,7 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-div {
+button {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -16,15 +16,20 @@ div {
   width: 3rem;
   background-color: pink;
   margin: 5px; }
-  div::after {
+  button::after {
     clear: both;
     content: "";
     display: block; }
-  div:last-child {
+  button:last-child {
     margin-right: 0; }
-  div:nth-child(4n) {
+  button:nth-child(4n) {
     margin-right: 0; }
-  div:nth-child(4n+1) {
+  button:nth-child(4n+1) {
     clear: left; }
+
+.result {
+  height: 2rem;
+  width: 7rem;
+  background-color: aquamarine; }
 
 /*# sourceMappingURL=main.css.map */
