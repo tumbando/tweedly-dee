@@ -1,0 +1,26 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
+
+// section {
+//   margin: 1rem;
+// }
+div {
+  @include outer-container;
+  @include span-columns(3);
+  @include omega(4n);
+  height: 3rem;
+  width: 3rem;
+  background-color: pink;
+  margin: 5px;
+}
+
+// .bottomRow {
+//   @include outer-container;
+//   @include span-columns(8);
+//   @include span-columns(4);
+//   height: 3rem;
+//   width: 3rem;
+//   // margin: auto;
+//   margin-right: 5px;
+// }

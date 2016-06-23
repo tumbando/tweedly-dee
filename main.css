@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+div {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  height: 3rem;
+  width: 3rem;
+  background-color: pink;
+  margin: 5px; }
+  div::after {
+    clear: both;
+    content: "";
+    display: block; }
+  div:last-child {
+    margin-right: 0; }
+  div:nth-child(4n) {
+    margin-right: 0; }
+  div:nth-child(4n+1) {
+    clear: left; }
+
+/*# sourceMappingURL=main.css.map */
