@@ -3,6 +3,7 @@
 //after user clicks oprator button, clear display, don't store second value until user clicks equals
 //run appropritae function when user clicks equals
 //clear display and show result
+//calculate with correct order of operations
 
 var zero = document.querySelector('#zero');
 var one = document.querySelector('#one');
@@ -104,4 +105,10 @@ divide.addEventListener('click', function () {
     var secondInt = document.querySelector('.result').innerHTML;
     document.querySelector('output').innerHTML=Number(firstInt) / Number(secondInt);
   });
+});
+
+percent.addEventListener('click', function (){
+  var int = document.querySelector('.result').innerHTML;
+  document.querySelector('output').innerHTML=Number(int) / 100;
+
 });
