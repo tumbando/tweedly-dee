@@ -72,11 +72,9 @@ clear.addEventListener('click', function () {
 
 add.addEventListener('click', function () {
   var firstInt = document.querySelector('.result').innerHTML;
-  console.log(firstInt);
+  document.querySelector('output').innerHTML='';
+    equals.addEventListener('click', function (){
+    var secondInt = document.querySelector('.result').innerHTML;
+    document.querySelector('output').innerHTML=Number(firstInt) + Number(secondInt);
+  });
 });
-
-
-var add = function (){};
-var subract = function (){};
-var multiply = function (){};
-var divide = function (){};
