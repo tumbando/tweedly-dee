@@ -16,7 +16,7 @@ var eight = document.querySelector('#eight');
 var nine = document.querySelector('#nine');
 var divide = document.querySelector('#divide');
 var multiply = document.querySelector('#multiply');
-var subtract = document.querySelector('#sutract');
+var subtract = document.querySelector('#subtract');
 var add = document.querySelector('#add');
 var equals = document.querySelector('#equals');
 var clear = document.querySelector('#clear');
@@ -76,5 +76,32 @@ add.addEventListener('click', function () {
     equals.addEventListener('click', function (){
     var secondInt = document.querySelector('.result').innerHTML;
     document.querySelector('output').innerHTML=Number(firstInt) + Number(secondInt);
+  });
+});
+
+subtract.addEventListener('click', function () {
+  var firstInt = document.querySelector('.result').innerHTML;
+  document.querySelector('output').innerHTML='';
+    equals.addEventListener('click', function (){
+    var secondInt = document.querySelector('.result').innerHTML;
+    document.querySelector('output').innerHTML=Number(firstInt) - Number(secondInt);
+  });
+});
+
+multiply.addEventListener('click', function () {
+  var firstInt = document.querySelector('.result').innerHTML;
+  document.querySelector('output').innerHTML='';
+    equals.addEventListener('click', function (){
+    var secondInt = document.querySelector('.result').innerHTML;
+    document.querySelector('output').innerHTML=Number(firstInt) * Number(secondInt);
+  });
+});
+
+divide.addEventListener('click', function () {
+  var firstInt = document.querySelector('.result').innerHTML;
+  document.querySelector('output').innerHTML='';
+    equals.addEventListener('click', function (){
+    var secondInt = document.querySelector('.result').innerHTML;
+    document.querySelector('output').innerHTML=Number(firstInt) / Number(secondInt);
   });
 });
