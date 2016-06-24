@@ -1,6 +1,5 @@
 //have display show digits being entered, being able to input more than just one digit.
-  //Maybe enter them as strings, so you can click in 11, vs. 1 and then a 1 to replace it
-//don't store the first input value until user clicks on operation button
+//when user clicks on operator button, store the first input value
 //after user clicks oprator button, clear display, don't store second value until user clicks equals
 //run appropritae function when user clicks equals
 //clear display and show result
@@ -18,8 +17,9 @@ var nine = document.querySelector('#nine');
 var divide = document.querySelector('#divide');
 var multiply = document.querySelector('#multiply');
 var subtract = document.querySelector('#sutract');
-var divide = document.querySelector('#divide');
+var add = document.querySelector('#add');
 var equals = document.querySelector('#equals');
+var clear = document.querySelector('#clear');
 
 
 zero.addEventListener('click', function (){
@@ -28,6 +28,51 @@ zero.addEventListener('click', function (){
 
 one.addEventListener('click', function () {
   document.querySelector('output').innerHTML+=1;
+});
+
+two.addEventListener('click', function () {
+  document.querySelector('output').innerHTML+=2;
+});
+
+three.addEventListener('click', function () {
+  document.querySelector('output').innerHTML+=3;
+});
+
+four.addEventListener('click', function () {
+  document.querySelector('output').innerHTML+=4;
+});
+
+five.addEventListener('click', function () {
+  document.querySelector('output').innerHTML+=5;
+});
+
+six.addEventListener('click', function () {
+  document.querySelector('output').innerHTML+=6;
+});
+
+seven.addEventListener('click', function () {
+  document.querySelector('output').innerHTML+=7;
+});
+
+eight.addEventListener('click', function () {
+  document.querySelector('output').innerHTML+=8;
+});
+
+nine.addEventListener('click', function () {
+  document.querySelector('output').innerHTML+=9;
+});
+
+decimal.addEventListener('click', function () {
+  document.querySelector('output').innerHTML+='.';
+});
+
+clear.addEventListener('click', function () {
+  document.querySelector('output').innerHTML='';
+});
+
+add.addEventListener('click', function () {
+  var firstInt = document.querySelector('.result').innerHTML;
+  console.log(firstInt);
 });
 
 
