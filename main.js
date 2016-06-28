@@ -4,6 +4,10 @@
 //run appropritae function when user clicks equals
 //clear display and show result
 //calculate with correct order of operations
+var firstInt;
+var secondInt;
+var operator;
+
 
 var zero = document.querySelector('#zero');
 var one = document.querySelector('#one');
@@ -21,94 +25,109 @@ var subtract = document.querySelector('#subtract');
 var add = document.querySelector('#add');
 var equals = document.querySelector('#equals');
 var clear = document.querySelector('#clear');
+var negative = document.querySelector('#negative');
 
-
-zero.addEventListener('click', function (){
-  document.querySelector('output').innerHTML+=0;
+zero.addEventListener('click', function() {
+    document.querySelector('.display').innerHTML += 0;
 });
 
-one.addEventListener('click', function () {
-  document.querySelector('output').innerHTML+=1;
+one.addEventListener('click', function() {
+    document.querySelector('.display').innerHTML += 1;
 });
 
-two.addEventListener('click', function () {
-  document.querySelector('output').innerHTML+=2;
+two.addEventListener('click', function() {
+    document.querySelector('.display').innerHTML += 2;
 });
 
-three.addEventListener('click', function () {
-  document.querySelector('output').innerHTML+=3;
+three.addEventListener('click', function() {
+    document.querySelector('.display').innerHTML += 3;
 });
 
-four.addEventListener('click', function () {
-  document.querySelector('output').innerHTML+=4;
+four.addEventListener('click', function() {
+    document.querySelector('.display').innerHTML += 4;
 });
 
-five.addEventListener('click', function () {
-  document.querySelector('output').innerHTML+=5;
+five.addEventListener('click', function() {
+    document.querySelector('.display').innerHTML += 5;
 });
 
-six.addEventListener('click', function () {
-  document.querySelector('output').innerHTML+=6;
+six.addEventListener('click', function() {
+    document.querySelector('.display').innerHTML += 6;
 });
 
-seven.addEventListener('click', function () {
-  document.querySelector('output').innerHTML+=7;
+seven.addEventListener('click', function() {
+    document.querySelector('.display').innerHTML += 7;
 });
 
-eight.addEventListener('click', function () {
-  document.querySelector('output').innerHTML+=8;
+eight.addEventListener('click', function() {
+    document.querySelector('.display').innerHTML += 8;
 });
 
-nine.addEventListener('click', function () {
-  document.querySelector('output').innerHTML+=9;
+nine.addEventListener('click', function() {
+    document.querySelector('.display').innerHTML += 9;
 });
 
-decimal.addEventListener('click', function () {
-  document.querySelector('output').innerHTML+='.';
+decimal.addEventListener('click', function() {
+    document.querySelector('.display').innerHTML += '.';
 });
 
-clear.addEventListener('click', function () {
-  document.querySelector('output').innerHTML='';
+clear.addEventListener('click', function() {
+    document.querySelector('.display').innerHTML = '';
+    firstInt='';
+    secondInt='';
 });
 
-add.addEventListener('click', function () {
-  var firstInt = document.querySelector('.result').innerHTML;
-  document.querySelector('output').innerHTML='';
-    equals.addEventListener('click', function (){
-    var secondInt = document.querySelector('.result').innerHTML;
-    document.querySelector('output').innerHTML=Number(firstInt) + Number(secondInt);
-  });
+add.addEventListener('click', function() {
+    firstInt = document.querySelector('.display').innerHTML;
+    console.log(firstInt);
+    document.querySelector('.display').innerHTML = '';
+    operator='+';
+
 });
 
-subtract.addEventListener('click', function () {
-  var firstInt = document.querySelector('.result').innerHTML;
-  document.querySelector('output').innerHTML='';
-    equals.addEventListener('click', function (){
-    var secondInt = document.querySelector('.result').innerHTML;
-    document.querySelector('output').innerHTML=Number(firstInt) - Number(secondInt);
-  });
+subtract.addEventListener('click', function() {
+    firstInt = document.querySelector('.display').innerHTML;
+    document.querySelector('.display').innerHTML = '';
+    operator='-';
 });
 
-multiply.addEventListener('click', function () {
-  var firstInt = document.querySelector('.result').innerHTML;
-  document.querySelector('output').innerHTML='';
-    equals.addEventListener('click', function (){
-    var secondInt = document.querySelector('.result').innerHTML;
-    document.querySelector('output').innerHTML=Number(firstInt) * Number(secondInt);
-  });
+multiply.addEventListener('click', function() {
+    firstInt = document.querySelector('.display').innerHTML;
+    document.querySelector('.display').innerHTML = '';
+    operator='*';
 });
 
-divide.addEventListener('click', function () {
-  var firstInt = document.querySelector('.result').innerHTML;
-  document.querySelector('output').innerHTML='';
-    equals.addEventListener('click', function (){
-    var secondInt = document.querySelector('.result').innerHTML;
-    document.querySelector('output').innerHTML=Number(firstInt) / Number(secondInt);
-  });
+divide.addEventListener('click', function() {
+    firstInt = document.querySelector('.display').innerHTML;
+    document.querySelector('.display').innerHTML = '';
+    operator='/';
 });
 
-percent.addEventListener('click', function (){
-  var int = document.querySelector('.result').innerHTML;
-  document.querySelector('output').innerHTML=Number(int) / 100;
 
+equals.addEventListener('click', function() {
+    secondInt = document.querySelector('.display').innerHTML;
+    console.log(firstInt);
+    console.log(secondInt);
+    console.log(operator);
+    if (operator === '+') {
+    document.querySelector('.display').innerHTML = Number(firstInt) + Number(secondInt);
+  } else if (operator === '-') {
+    document.querySelector('.display').innerHTML = Number(firstInt) - Number(secondInt);
+  }  else if (operator === '*') {
+      document.querySelector('.display').innerHTML = Number(firstInt) * Number(secondInt);
+    } else if (operator === '/'){
+      document.querySelector('.display').innerHTML = Number(firstInt) / Number(secondInt);
+    }
+
+});
+
+percent.addEventListener('click', function() {
+    var int = document.querySelector('.display').innerHTML;
+    document.querySelector('.display').innerHTML = Number(int) / 100;
+
+});
+
+negative.addEventListener('click', function() {
+    var int = document.querySelector('.display').innerHTML;
+    document.querySelector('.display').innerHTML = Number(int) - 2 * Number(int);
 });

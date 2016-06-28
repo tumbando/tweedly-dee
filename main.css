@@ -4,6 +4,15 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+html {
+  background-color: black; }
+
+.container {
+  border: 1rem solid white;
+  height: 24rem;
+  width: 17rem;
+  margin: 0 auto; }
+
 button {
   max-width: 1200px;
   margin-left: auto;
@@ -27,9 +36,10 @@ button {
   button:nth-child(4n+1) {
     clear: left; }
 
-.result {
+.display {
   height: 2rem;
-  width: 7rem;
-  background-color: aquamarine; }
+  width: 14rem;
+  background-color: aquamarine;
+  padding-right: 15rem; }
 
 /*# sourceMappingURL=main.css.map */
